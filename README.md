@@ -1,2 +1,2 @@
 # AnimaisFantasticos
- Site desenvolvido com estudo do curso da Origami
+ Site desenvolvido com estudo no curso de JavaScript ES6+ na ORIGAMID.
