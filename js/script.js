@@ -23,4 +23,3 @@ initFetchAnimais();
 initFetchBitcoin();
 
 
-
