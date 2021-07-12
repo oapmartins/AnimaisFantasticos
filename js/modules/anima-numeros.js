@@ -4,10 +4,10 @@ export default function initAnimaNumeros() {
         numeros.forEach((numero) => {
             const total = +numero.innerText;
             const incremeto = Math.floor(total / 100);
-    
+
             let start = 0;
             const timer = setInterval(() => {
-                start = start + incremeto;
+                start += incremeto;
                 numero.innerText = start;
                 if (start > total) {
                     numero.innerText = total;
@@ -16,17 +16,17 @@ export default function initAnimaNumeros() {
             }, 25 * Math.random());
         });
     }
-    
-    
+
+    let observer;
+
     function handleMutation(mutation) {
-        if(mutation[0].target.classList.contains('ativo')){
+        if (mutation[0].target.classList.contains('ativo')) {
             observer.disconnect();
             animaNumeros();
         }
     }
-    
+    observer = new MutationObserver(handleMutation);
+
     const observeTarget = document.querySelector('.numeros');
-    const observer = new MutationObserver(handleMutation);
     observer.observe(observeTarget, { attributes: true });
 }
-
