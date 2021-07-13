@@ -1,5 +1,5 @@
 {
-  "name": "animaisfantasticos-site",
+  "name": "animais-fantasticos",
   "version": "1.0.0",
   "description": "Site desenvolvido com estudo no curso de JavaScript ES6+ na ORIGAMID.",
   "main": "index.html",
@@ -10,7 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/oapmartins/AnimaisFantasticos.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/oapmartins/AnimaisFantasticos/issues"
