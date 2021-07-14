@@ -23,6 +23,7 @@ export default class Accordion {
             // Ativar primeiro item.
             this.toggleAccordion(this.accordinonList[0]);
             this.addAccordionEvent();
+            return this;
         }
     }
 }
