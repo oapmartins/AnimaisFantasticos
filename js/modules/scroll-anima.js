@@ -1,9 +1,10 @@
+import debouce from "./debouce.js";
 export default class ScrollAnima {
     constructor(sections) {
         this.sections = document.querySelectorAll(sections);
         this.windowMetade = window.innerHeight * 0.5;
 
-        this.checkDistance = this.checkDistance.bind(this);
+        this.checkDistance = debouce(this.checkDistance.bind(this), 50);
     }
 
     // Pega a disntância de cada item em relação o topo do site.
@@ -33,7 +34,7 @@ export default class ScrollAnima {
             this.getDistance();
             this.checkDistance();
             window.addEventListener('scroll', this.checkDistance);
-        }
+        } 
         return this;
     }
 
